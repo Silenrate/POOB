@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CarefulHero
+comment0.text=\r\n\ A\ hero\ that\ always\ does\ secure\ jumps\r\n\ \r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\ \r\n\ @version\ (25/03/2019)\r\n
+comment1.params=city\ color\ hidingBuilding\ strength
+comment1.target=CarefulHero(CityOfHeroes,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ of\ a\ careful\ hero.\r\n
+comment2.params=velocity\ angle\ slow
+comment2.target=void\ jump(int,\ double,\ boolean)
+comment2.text=\r\n\ Makes\ jump\ a\ hero\ into\ the\ city.\r\n\ @param\ velocity\ The\ speed\ that\ the\ hero\ jumps.\r\n\ @param\ angle\ The\ angle\ that\ the\ hero\ jumps.\r\n\ @param\ slow\ A\ boolean\ indicating\ if\ the\ jumps\ sees\ slow\ or\ not.\r\n
+numComments=3

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=DeportistaVigorexo
+comment0.text=\r\n\ Un\ deportista\ que\ solo\ piensa\ en\ hacer\ ejercicio\ hasta\ que\ no\ puede\ mas.\r\n\r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\r\n\ @version\ (11\ of\ March\ of\ 2019)\r\n
+comment1.params=salon\ nombre\ posicionx\ posiciony
+comment1.target=DeportistaVigorexo(Salon,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ un\ \ Deportista\ Vigorexo.\r\n
+comment2.params=
+comment2.target=void\ inicie()
+comment2.text=\r\n\ Inicia\ la\ rutina\ de\ un\ deportista\ vigorexo.\r\n
+comment3.params=
+comment3.target=void\ pare()
+comment3.text=\r\n\ Termina\ la\ rutina\ de\ un\ deportista\ vigorexo.\r\n
+comment4.params=
+comment4.target=void\ decida()
+comment4.text=\r\n\ Decide\ si\ el\ deportista\ vigorexo\ sigue\ ejercitandose,\ en\ base\ a\ su\ energia.\r\n
+numComments=5

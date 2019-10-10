@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=VelocidadTest
+comment0.text=\r\n\ The\ test\ class\ VelocidadTest.\r\n\r\n\ @author\ \ (Nicolas\ Aguilera\ &&\ Daniel\ Walteros)\r\n\ @version\ (10/02/2019)\r\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\r\n\ Sets\ up\ the\ test\ fixture.\r\n\r\n\ Called\ before\ every\ test\ case\ method.\r\n
+comment2.params=
+comment2.target=void\ deberiaRetonarBienComponenteEnX()
+comment3.params=
+comment3.target=void\ deberiaRetonarBienComponenteEnY()
+comment4.params=
+comment4.target=void\ noDeberianSerIguales()
+comment5.params=
+comment5.target=void\ noDeberianSerObjetosIguales()
+comment6.params=
+comment6.target=void\ deberiaRotar()
+comment7.params=
+comment7.target=void\ tearDown()
+comment7.text=\r\n\ Tears\ down\ the\ test\ fixture.\r\n\r\n\ Called\ after\ every\ test\ case\ method.\r\n
+numComments=8

@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=CityOfHeroesTestC4
+comment0.text=\r\n\ The\ test\ class\ CityOfHeroesTestC4.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=CityOfHeroesTestC4()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ CityOfHeroesTestC4\r\n
+comment10.params=
+comment10.target=void\ segunJMNoDeberiaRealizarSalto()
+comment11.params=
+comment11.target=void\ SegunJMDeberiaDestruirRadical()
+comment2.params=
+comment2.target=void\ segunCVdeberiaEscalar()
+comment3.params=
+comment3.target=void\ segunCVdeberiaSerCuidadoso()
+comment4.params=
+comment4.target=void\ segunCVdeberiaParatrooper()
+comment5.params=
+comment5.target=void\ segunFGdeberiaSaltarCarefull()
+comment6.params=
+comment6.target=void\ segunFGnoDeberiaSaltarCarefull()
+comment7.params=
+comment7.target=void\ segunHRnodeberiasaltar()
+comment8.params=
+comment8.target=void\ segunSSDeberiaEscalar()
+comment8.text=\r\n\ \ \ \ @Test\r\n\ \ \ \ public\ void\ deberiaSaltarysalirdlecanvasSegunHR()\ throws\ CityOfHeroesExcepcion{\r\n\ \ \ \ \ \ \ \ CityOfHeroes\ ch\ \=\ new\ CityOfHeroes(600,600);\r\n\ \ \ \ \ \ \ \ ch.addBuilding("flexible",0,100,200,30);\r\n\ \ \ \ \ \ \ \ ch.addBuilding("flexible",200,100,500,80);\r\n\ \ \ \ \ \ \ \ ch.addBuilding("flexible",400,100,500,80);\r\n\ \ \ \ \ \ \ \ ch.addHeroe("blue",1,40);\r\n\ \ \ \ \ \ \ \ ch.jump("blue",60,45,true);\r\n\ \ \ \ \ \ \ \ assertFalse(ch.ok());\r\n\ \ \ \ }\r\n
+comment9.params=
+comment9.target=void\ segunSSDeberiaEscalarReverse()
+numComments=12

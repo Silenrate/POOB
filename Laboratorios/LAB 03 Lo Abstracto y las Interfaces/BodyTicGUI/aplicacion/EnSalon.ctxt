@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=EnSalon
+comment1.params=
+comment1.target=int\ getPosicionX()
+comment1.text=\r\n\ Devuelve\ la\ coordenada\ horizontal.\r\n\ @return\ La\ posicion\ x\ del\ objeto.\r\n
+comment2.params=
+comment2.target=int\ getPosicionY()
+comment2.text=\r\n\ Devuelve\ la\ coordenada\ vertical.\r\n\ @return\ La\ posicion\ y\ del\ objeto.\r\n
+comment3.params=
+comment3.target=java.awt.Color\ getColor()
+comment3.text=\r\n\ Devuelve\ el\ color\ del\ objeto.\r\n\ @return\ El\ color\ del\ objeto\ en\ tipo\ Color.\r\n
+comment4.params=
+comment4.target=void\ inicie()
+comment4.text=\r\n\ Hace\ que\ el\ objeto\ inicie\ su\ rutina.\r\n
+comment5.params=
+comment5.target=void\ pare()
+comment5.text=\r\n\ Hace\ que\ el\ objeto\ termine\ su\ rutina.\r\n
+comment6.params=
+comment6.target=java.lang.String\ forma()
+comment6.text=\r\n\ Devuelve\ forma\ del\ objeto.\r\n\ @return\ El\ string\ "circulo".\r\n
+comment7.params=
+comment7.target=java.lang.String\ mensaje()
+comment7.text=\r\n\ Da\ un\ mensaje\ vacio.\r\n\ @return\ Elmensaje\ vacio.\r\n
+comment8.params=
+comment8.target=void\ decida()
+comment8.text=\r\n\ Decide\ aleatoriamente\ la\ acci\u00F3n\ a\ tomar.\r\n
+numComments=9

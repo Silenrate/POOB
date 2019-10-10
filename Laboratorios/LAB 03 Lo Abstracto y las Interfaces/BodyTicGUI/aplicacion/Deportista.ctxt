@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Deportista
+comment1.params=salon\ nombre\ posicionx\ posiciony
+comment1.target=Deportista(Salon,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ un\ deportista.\r\n
+comment2.params=direccion
+comment2.target=boolean\ puedeMover(char)
+comment2.text=\r\n\ Muestra\ si\ es\ posible\ que\ el\ deportista\ se\ mueva\ en\ una\ direccion.\r\n\ @param\ La\ direccion\ a\ la\ que\ se\ va\ a\ mover\:\ (N)orte,\ (S)ur,\ (E)ste,\ (O)este.\r\n\ @return\ La\ posibildad\ de\ que\ el\ deportista\ se\ mueva.\r\n
+comment3.params=
+comment3.target=void\ pare()
+comment3.text=\r\n\ Detiene\ la\ rutina\ de\ ejercicio\ del\ deportista.\r\n
+comment4.params=
+comment4.target=void\ inicie()
+comment4.text=\r\n\ Inicia\ la\ rutina\ de\ ejercicio\ del\ deportista.\r\n
+comment5.params=
+comment5.target=java.lang.String\ forma()
+comment5.text=\r\n\ Muestra\ la\ forma\ del\ objeto\ deportista.\r\n\ @return\ Un\ string\ con\ la\ palabra\ "persona".\r\n
+comment6.params=
+comment6.target=java.lang.String\ mensaje()
+comment6.text=\r\n\ Conoce\ lo\ que\ quiere\ decir\ el\ deportista.\r\n\ @return\ El\ mensaje\ del\ deportista.\r\n
+numComments=7

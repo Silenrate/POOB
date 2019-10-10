@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Pair
+comment0.text=\r\n\ Class\ that\ represents\ a\ Building\ through\ a\ pair\ of\ coordiantes\r\n\ \r\n\ @author\ (Nicolas\ Aguilera\ Contreras\ &&\ Daniel\ Walteros)\ \r\n\ @version\ (10/03/2019)\r\n
+comment1.params=y\ x
+comment1.target=Pair(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Pair\r\n\ \r\n\ @param\ y\ \:\ The\ vertical\ coordinate\ of\ the\ building.\r\n\ @param\ x\ \:\ The\ horizontal\ coordinate\ of\ the\ building.\r\n
+comment2.params=
+comment2.target=int\ getY()
+comment2.text=\r\n\ Gets\ the\ horizontal\ coordinate\ of\ the\ building.\r\n\ \r\n\ @return\ \ The\ horizontal\ coordinate\ of\ the\ building.\r\n
+comment3.params=
+comment3.target=int\ getX()
+comment3.text=\r\n\ Gets\ the\ vertical\ coordinate\ of\ the\ building.\r\n\ \r\n\ @return\ \ The\ horizontal\ coordinate\ of\ the\ building.\r\n
+comment4.params=angulo
+comment4.target=void\ setAngulo(double)
+comment4.text=\r\n\ Sets\ the\ angle\ to\ go\ to\ this\ building\r\n\ \r\n
+comment5.params=
+comment5.target=double\ getAngulo()
+comment5.text=\r\n\ Gets\ the\ angle\ to\ go\ to\ this\ building\r\n\ \r\n\ @return\ \ The\ angle\ to\ go\ to\ this\ building\r\n
+comment6.params=i\ j
+comment6.target=void\ setBeforeBuilding(int,\ int)
+comment6.text=\r\n\ Sets\ the\ building\ to\ go\ from\ that\ building\ to\ this\ building\r\n\ \r\n
+comment7.params=
+comment7.target=int[]\ getBeforeBuilding()
+comment7.text=\r\n\ Gets\ the\ building\ to\ go\ from\ that\ building\ to\ this\ building\r\n\ \r\n\ @return\ \ An\ array\ of\ int\ cointaining\ the\ vertical\ and\ horizontal\ coordinates\ of\ the\ building\r\n
+numComments=8

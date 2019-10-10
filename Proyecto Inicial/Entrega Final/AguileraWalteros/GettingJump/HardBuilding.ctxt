@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=HardBuilding
+comment0.text=\r\n\ A\ building\ that\ cant\ be\ damaged\ by\ a\ crush,\ it\ can\ be\ identified\ by\ his\ red\ window.\r\n\r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\r\n\ @version\ (24\ of\ March\ of\ 2019)\r\n
+comment1.params=city\ x\ width\ height\ hardness
+comment1.target=HardBuilding(CityOfHeroes,\ int,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ RadicalBuilding\r\n
+comment2.params=hero\ jump\ tempY\ actualY
+comment2.target=boolean\ isDamagedByHero(Hero,\ boolean,\ java.math.BigDecimal,\ java.math.BigDecimal)
+comment2.text=\r\n\ Knows\ if\ the\ building\ was\ damaged\ by\ a\ hero.\r\n\ \r\n\ @param\ \ hero\ The\ hero\ that\ crash\ with\ the\ building.\r\n\ @param\ \ jump\ The\ boolean\ value\ that\ determines\ if\ the\ hero\ are\ jumping.\ \r\n\ @param\ \ tempY\ The\ Y\ coordinate\ in\ the\ hero\ smash\ the\ building.\r\n\ @param\ \ actaulY\ The\ Y\ coordinate\ of\ the\ hero.\r\n
+comment3.params=jump\ cityHeight\ y
+comment3.target=void\ updateSize(boolean,\ int,\ int)
+comment3.text=\r\n\ Updates\ the\ size\ of\ the\ building\ when\ gets\ damaged.\r\n\ \r\n\ @param\ \ jump\ The\ boolean\ value\ that\ determines\ if\ the\ hero\ are\ jumping.\ \r\n\ @param\ \ cityHeight\ The\ height\ of\ the\ city.\r\n\ @param\ \ y\ The\ Y\ coordinate\ in\ the\ hero\ smash\ the\ building.\r\n
+comment4.params=x\ y
+comment4.target=void\ goTo(int,\ int)
+comment4.text=\r\n\ Moves\ the\ building\ in\ the\ city.\r\n\ \r\n\ @param\ x\ The\ X\ coordinate\ in\ the\ city.\r\n\ @param\ y\ The\ Y\ coordinate\ in\ the\ city.\r\n
+comment5.params=
+comment5.target=void\ makeVisible()
+comment5.text=\r\n\ Makes\ visible\ the\ building.\r\n\ \r\n
+comment6.params=
+comment6.target=void\ makeInvisible()
+comment6.text=\r\n\ Makes\ invisible\ the\ building.\r\n\ \r\n
+comment7.params=newHeight\ newWidth
+comment7.target=void\ changeSize(int,\ int)
+comment7.text=\r\n\ Changes\ the\ size\ of\ the\ building.\r\n\ \r\n\ @param\ newHeight\ The\ new\ height\ of\ the\ new\ hardness.\r\n\ @param\ newWidth\ The\ new\ width\ of\ the\ new\ hardness.\r\n
+numComments=8

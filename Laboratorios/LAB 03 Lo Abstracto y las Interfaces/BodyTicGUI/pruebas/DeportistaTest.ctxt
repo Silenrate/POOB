@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DeportistaTest
+comment1.params=
+comment1.target=void\ deberianPoderMoverBien()
+comment2.params=
+comment2.target=void\ noDeberiaPoderMoverBien()
+comment3.params=
+comment3.target=void\ deberiaIniciar()
+comment4.params=
+comment4.target=void\ deberiaParar()
+numComments=5

@@ -1,0 +1,306 @@
+package jumpheroe;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class JumpHeroe {
+    static int F; static int C;  static double W; static int V;
+    static double vx; static double vy; static double angulo;
+    static int yi; static int xi; static int[][] grid;
+    static double distancia; static double diagonal;
+    static int deltaH;
+    static int [][] rta;
+    static boolean visitados[][];
+    static double gravedad = 9.80665;
+    static Queue <Pair> Q = new LinkedList<>();
+    public static boolean canJump(){
+        double a = Math.pow(deltaH,2)+Math.pow(distancia,2);
+        double b = (deltaH*gravedad*Math.pow(distancia,2))-(Math.pow(distancia,2)*Math.pow(V,2));
+        double c = (Math.pow(gravedad,2)*Math.pow(distancia,4))/4;
+        double determinante = Math.pow(b,2)-(4*a*c);
+        if(determinante>=0){
+            double temp1=(-b+Math.sqrt(determinante))/(2*a);
+            double temp2=(-b-Math.sqrt(determinante))/(2*a);
+            if(temp1<temp2){vx=Math.sqrt(temp1);}
+            else{vx=Math.sqrt(temp2);}
+            vy=Math.sqrt(Math.pow(V,2)-Math.pow(vx,2));
+            angulo = Math.toDegrees(Math.atan(vy/vx));
+            return true;
+        }
+        return false;
+    }
+    // SI SALTA EN DIRECCION HORIZONTAL
+    public static boolean checkHorizontal(int yi , int xi , int yf , int xf) throws IOException{
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        double x; double trayectoria;
+        double tangente = Math.tan(Math.toRadians(angulo));
+        double coseno = Math.cos(Math.toRadians(angulo));
+        // DE IZQUIERDA A DERECHA
+        if(xi<xf){
+            double stepx=0;
+            for(int i=xi+1 ; i<=xf ; i++){
+                x = stepx+W/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[yi][i] || trayectoria<=grid[yi][i-1]){return false;}
+                if(i==xf){break;}
+                x = stepx+W/2+W;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[yi][i]){return false;}
+                stepx+=W;
+            }
+        }
+        // DE DERECHA A IZQUIERDA
+        else if(xi>xf){
+            double stepx=0;
+            for(int i=xi-1 ; i>=xf ; i--){
+                x = stepx+W/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[yi][i] || trayectoria<=grid[yi][i+1] ){return false;}
+                if(i==xf){break;}
+                x = stepx+W/2+W;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[yi][i]){return false;}
+                stepx+=W;
+            }
+        }
+        return true;
+    }
+    // SI SALTA VERTICALMENTE
+    public static boolean checkVertical(int yi , int xi , int yf , int xf){
+        double x; double trayectoria;
+        double tangente = Math.tan(Math.toRadians(angulo));
+        double coseno = Math.cos(Math.toRadians(angulo));
+        // DE ARRIBA PARA ABAJO
+        if(yi<yf){
+            double stepx=0;
+            for(int i=yi+1 ; i<=yf ; i++){
+                x = stepx+W/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[i][xi]|| trayectoria<=grid[i-1][xi]){return false;}
+                if(i==yf){break;}
+                x = stepx+W/2+W;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[i][xi]){return false;}
+                stepx+=W;
+            }
+        }
+        //DE ABAJO PARA ARRIBA
+        else if(yi>yf){
+            double stepx=0;
+            for(int i=yi-1 ; i>=yf ; i--){
+                x = stepx+W/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[i][xi] || trayectoria<=grid[i+1][xi]  ){return false;}
+                if(i==yf){break;}
+                x = stepx+W/2+W;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                if(trayectoria<=grid[i][xi]){return false;}
+                stepx+=W;
+            }
+        }
+        return true;
+    }
+    // SI SALTA EN DIAGONAL
+    public static boolean checkDiagonal(int yi,int xi,int yf,int xf){
+        double x; double trayectoria;
+        double tangente = Math.tan(Math.toRadians(angulo));
+        double coseno = Math.cos(Math.toRadians(angulo));
+        //DIAGONAL ARRIBA ABAJO - IZQUIERDA DERECHA
+        //System.out.println(yi+""+xi);
+        //System.out.println(yf+""+xf);
+        if(yi<yf && xi<xf){
+            double stepx=0; int dx=xi+1; int [] posy = {-1,0}; int [] posx = {0,-1}; int maximo;
+            for(int i=yi+1 ; i<=yf ; i++){
+                x = stepx+diagonal/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                maximo = Math.max(grid[i+posy[0]][dx+posx[0]],grid[i+posy[1]][dx+posx[1]]);
+                if(trayectoria<=maximo){return false;}
+                if(trayectoria<=grid[i][dx] || trayectoria<=grid[i-1][dx-1]){return false;}
+                stepx+=diagonal;
+                dx+=1;
+            }
+        }
+        //DIAGONAL ARRIBA ABAJO - DERECHA A IZQUIERDA
+        if(yi<yf && xi>xf){
+            double stepx=0; int dx=xi-1; int [] posy = {-1,0}; int [] posx = {0,1}; int maximo;
+            for(int i=yi+1 ; i<=yf ; i++){
+                x = stepx+diagonal/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                maximo = Math.max(grid[i+posy[0]][dx+posx[0]],grid[i+posy[1]][dx+posx[1]]);
+                if(trayectoria<=maximo){return false;}
+                if(trayectoria<=grid[i][dx] || trayectoria<=grid[i-1][dx+1]){return false;}
+                stepx+=diagonal;
+                dx-=1;
+            }
+        }
+        //DIAGONAL ABAJO ARRIBA - DERECHA A IZQUIERDA
+        if(yf<yi && xi>xf){
+            double stepx=0; int dx=xi-1; int [] posy = {1,0}; int [] posx = {0,1}; int maximo;
+            for(int i=yi-1 ; i>=yf ; i--){
+                x = stepx+diagonal/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                maximo = Math.max(grid[i+posy[0]][dx+posx[0]],grid[i+posy[1]][dx+posx[1]]);
+                if(trayectoria<=maximo){return false;}
+                if(trayectoria<=grid[i][dx] || trayectoria<=grid[i+1][dx+1]){return false;}
+                stepx+=diagonal;
+                dx-=1;
+            }
+        }
+        //DIAGONAL ABAJO ARRIBA - IZQUIERDA A DERECHA
+        if(yf<yi && xi<xf){
+            double stepx=0; int dx=xi+1; int [] posy = {1,0}; int [] posx = {0,-1}; int maximo;
+            for(int i=yi-1 ; i>=yf ; i--){
+                x = stepx+diagonal/2;
+                trayectoria = grid[yi][xi]+(x*tangente)-((gravedad*x*x)/(2*V*V*coseno*coseno));
+                maximo = Math.max(grid[i+posy[0]][dx+posx[0]],grid[i+posy[1]][dx+posx[1]]);
+                if(trayectoria<=maximo){return false;}
+                if(trayectoria<=grid[i][dx] || trayectoria<=grid[i+1][dx-1]){return false;}
+                stepx+=diagonal;
+                dx+=1;
+            }
+        }
+        return true;
+    }
+    public static boolean checkRandomJump(int yi,int xi,int yf,int xf){
+        int stepy = (yf-yi)/Math.abs(yf-yi);
+        int y = yi + stepy;
+        double x = xi + .5 + (xf-xi)/(2.0*Math.abs(yf-yi));
+        for (int i=0; i<Math.abs(yf-yi); i++) {
+            int posx = (int)(x+1e-9);
+            int maximo = grid[posx][y];
+            maximo = Math.max(maximo, grid[posx][y-stepy]);
+            if (x - posx< 1e-8) {
+                maximo = Math.max(maximo, grid[posx-1][y]);
+                maximo = Math.max(maximo, grid[posx-1][y-stepy]);
+            }
+            double disx = W*Math.sqrt((i+.5)*(i+.5)+(x-xi-.5)*(x-xi-.5));
+            double tiempo = disx/(vx);
+            double trayectoria = grid[xi][yi]+vy*tiempo - .5*gravedad*tiempo*tiempo;
+            if (trayectoria < maximo)
+                return false;
+            y += stepy;
+            x += (xf-xi)/(1.0*Math.abs(yf-yi));
+	}
+        return true;
+    }
+    public static boolean isValid(int yi,int xi,int yf,int xf) throws IOException{
+        if(yi==yf){
+            deltaH = grid[yf][xf]-grid[yi][xi];
+            distancia = (xf*W-W/2)-(xi*W-W/2);
+            if(!canJump()){return false;}
+            return checkHorizontal(yi,xi,yf,xf);
+        }
+        else if(xi==xf){
+            deltaH = grid[yf][xf]-grid[yi][xi];
+            distancia = (yf*W-W/2)-(yi*W-W/2);
+            if(!canJump()){return false;}
+            return checkVertical(yi,xi,yf,xf);
+        }
+        else if((yi-xi)==(yf-xf) || (xi+yi) == (yf+xf)){
+            deltaH = grid[yf][xf]-grid[yi][xi];
+            distancia = Math.abs(yf-yi)*diagonal;
+            if(!canJump()){return false;}
+            return checkDiagonal(yi,xi,yf,xf);
+        }
+        else{
+            deltaH = grid[yf][xf]-grid[yi][xi];
+            distancia = Math.sqrt((xf-xi)*(xf-xi)+(yf-yi)*(yf-yi))*W;
+            if(!canJump()){return false;}
+            return checkRandomJump(xi,yi,xf,yf);
+        }
+    }
+    //BFS
+    public static void bfs() throws IOException{
+        while(! Q.isEmpty()){
+            Pair u = Q.remove();
+            int y = u.y;
+            int x = u.x;
+            for(int i=0 ; i<F ; i++){
+                for(int j=0 ; j<C ; j++){
+                    Pair pair = new Pair(i,j);
+                    if(i!=y || j!=x){
+                        if(isValid(y,x,i,j) && visitados[i][j]==false){
+                            rta[i][j]=rta[y][x]+1;
+                            visitados[i][j]=true;
+                            Q.add(pair);
+                            pair.setAngulo(angulo);
+                            pair.setBeforeBuilding(y,x);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //ENTRADA
+    public static void main(String[] args) throws IOException {
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        String entrada;
+        entrada = input.readLine();
+        StringTokenizer st = new StringTokenizer(entrada);
+        C = Integer.parseInt(st.nextToken());
+        F = Integer.parseInt(st.nextToken());
+        grid = new int[F][C];
+        rta = new int [F][C];
+        visitados = new boolean [F][C];
+        Q = new LinkedList<>();
+        W = Integer.parseInt(st.nextToken());
+        V = Integer.parseInt(st.nextToken());
+        xi = Integer.parseInt(st.nextToken())-1;
+        yi = Integer.parseInt(st.nextToken())-1;
+        diagonal = W*Math.sqrt(2);
+        rta[yi][xi]=0;
+        visitados[yi][xi]=true;
+        Q.add(new Pair(yi,xi));
+        for(int i=0; i<F ; i++){
+            entrada = input.readLine();
+            st = new StringTokenizer(entrada);
+            for(int j=0 ; j<C ; j++){
+                grid[i][j]=Integer.parseInt(st.nextToken());
+                rta[i][j]=0;
+            }
+        }
+        bfs();
+        for(int i=0 ; i<F ; i++){
+            for(int j=0 ; j<C ; j++){
+                if(i==yi && j==xi){
+                    System.out.print(0);
+                }
+                else if(rta[i][j]==0){
+                    System.out.print("X");
+                }
+                else{
+                    System.out.print(rta[i][j]);
+                }
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+    }
+    static class Pair{
+        int y; int x; 
+        double angulo;
+        int[] beforeBuilding;
+        Pair(int y , int x){
+            this.y=y; this.x=x;
+        }
+        void setAngulo(double angulo){
+            this.angulo=angulo;
+        }
+        double getAngulo(){
+            return angulo;
+        }
+        void setBeforeBuilding(int i , int j){
+            beforeBuilding=new int[2];
+            beforeBuilding[0]=i;
+            beforeBuilding[1]=j;
+        }
+        int[] getBeforeBuilding(){
+            return beforeBuilding;
+        }
+    }
+}

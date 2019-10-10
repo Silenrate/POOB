@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=DeportistaHablador
+comment0.text=\r\n\ Un\ deportista\ que\ prefiere\ hablar\ a\ hacer\ ejercicio.\r\n\r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\r\n\ @version\ (11\ of\ March\ of\ 2019)\r\n
+comment1.params=salon\ nombre\ posicionx\ posiciony
+comment1.target=DeportistaHablador(Salon,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ un\ Deportista\ Hablador.\r\n
+comment2.params=
+comment2.target=void\ inicie()
+comment2.text=\r\n\ Inicia\ la\ rutina\ de\ un\ deportista\ hablador.\r\n
+comment3.params=
+comment3.target=void\ pare()
+comment3.text=\r\n\ Termina\ la\ rutina\ de\ un\ deportista\ hablador.\r\n
+numComments=4

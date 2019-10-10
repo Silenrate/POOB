@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Tree
+comment0.text=\r\n\ A\ binary\ tree\ that\ represents\ data\ in\ base\ for\ thier\ insertion\ order.\r\n\ \r\n\ @author\ (Daniel\ Walteros\ y\ Nicolas\ Aguilera)\ \r\n\ @version\ (29\ of\ January\ of\ 2019)\r\n
+comment1.params=value
+comment1.target=Tree(int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tree\r\n\ \r\n\ @param\ value\ \ an\ integer\ value\ that\ represents\ the\ root\ for\ the\ tree.\r\n
+comment2.params=
+comment2.target=Node\ getRoot()
+comment2.text=\r\n\ Gets\ the\ root\ of\ the\ tree\r\n\ \r\n\ @return\ \ The\ node\ of\ the\ root\ of\ the\ tre\r\n
+comment3.params=root
+comment3.target=void\ setRoot(Node)
+comment3.text=\r\n\ Sets\ the\ root\ of\ the\ tree\r\n\ \r\n\ @param\ root\ The\ new\ root\ of\ the\ tree(is\ class\ Node).\r\n
+comment4.params=node\ root
+comment4.target=void\ addNode(Node,\ Node)
+comment4.text=\r\n\ Adds\ a\ new\ node\ to\ the\ tree.\r\n\ \r\n\ @param\ node\ The\ new\ node\ that\ is\ going\ to\ be\ add.\r\n\ @param\ root\ The\ root\ of\ the\ tree\ that\ is\ going\ to\ be\ add\ the\ new\ node.\r\n
+comment5.params=node
+comment5.target=void\ addNode(Node)
+comment5.text=\r\n\ Adds\ a\ new\ node\ to\ the\ tree.\r\n\ \r\n\ @param\ node\ The\ new\ node\ that\ is\ going\ to\ be\ add.\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ Prints\ the\ tree\ in\ a\ String.\r\n\ \r\n\ return\ The\ Class\ Tree\ in\ the\ format\ {root\:node,node}.\r\n
+comment7.params=x\ nodes\ nodesLayer\ lcolor
+comment7.target=void\ showTree(int,\ Circle[],\ Circle[],\ java.lang.String)
+comment7.text=\r\n\ Show\ the\ tree\ in\ a\ canvas.\r\n\ \r\n\ @param\ nodes\ The\ list\ of\ Circles\ that\ represents\ each\ node.\r\n\ @param\ lcolor\ The\ color\ of\ the\ ceiling.\r\n
+numComments=8

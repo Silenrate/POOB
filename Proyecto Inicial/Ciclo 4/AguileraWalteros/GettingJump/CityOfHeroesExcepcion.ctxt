@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CityOfHeroesExcepcion
+comment0.text=\r\n\ The\ exceptions\ in\ the\ city\ of\ heroes.\r\n\r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\r\n\ @version\ (25\ of\ March\ of\ 2019)\r\n
+comment1.params=mensaje
+comment1.target=CityOfHeroesExcepcion(java.lang.String)
+numComments=2

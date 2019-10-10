@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ParatrooperHero
+comment0.text=\r\n\ A\ hero\ that\ never\ goes\ out\ of\ a\ city\ of\ heroes.\r\n\ \r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\ \r\n\ @version\ (25/03/2019)\r\n
+comment1.params=city\ color\ hidingBuilding\ strength
+comment1.target=ParatrooperHero(CityOfHeroes,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ParatrooperHero\r\n
+comment2.params=xi\ x\ citySizeX\ yi\ y\ citySize
+comment2.target=boolean\ ifHeroOutOfLimits(java.math.BigDecimal,\ java.math.BigDecimal,\ java.math.BigDecimal,\ java.math.BigDecimal,\ java.math.BigDecimal,\ java.math.BigDecimal)
+comment2.text=\r\n\ Verifies\ if\ in\ a\ jump\ hero\ goes\ out\ of\ the\ city\r\n\ \r\n\ @param\ xi\ the\ initial\ horizontal\ coordinate\ of\ the\ Hero\r\n\ @param\ x\ the\ actual\ horizontal\ coordinate\ of\ the\ Hero\r\n\ @param\ yi\ the\ initial\ vertical\ coordinate\ of\ the\ Hero\r\n\ @param\ y\ the\ actual\ horizontal\ coordinate\ of\ the\ Hero\r\n\ @param\ citySizeX\ the\ size\ of\ the\ Width\ of\ the\ City\r\n\ @param\ citySize\ the\ size\ of\ the\ Height\ of\ the\ City\r\n\ @return\ The\ boolean\ value\ that\ represents\ if\ the\ hero\ gets\ out\ of\ the\ city\r\n
+comment3.params=auxY\ citySize\ auxX
+comment3.target=void\ goDown(int,\ java.math.BigDecimal,\ int)
+comment3.text=\r\n\ Makes\ the\ Hero\ goes\ to\ the\ floor\ of\ the\ city\r\n\ \r\n\ @param\ xi\ the\ initial\ horizontal\ coordinate\ of\ the\ Hero\r\n\ @param\ x\ the\ actual\ horizontal\ coordinate\ of\ the\ Hero\r\n\ @param\ yi\ the\ initial\ vertical\ coordinate\ of\ the\ Hero\r\n\ @return\ The\ boolean\ value\ that\ represents\ if\ the\ hero\ gets\ out\ of\ the\ city\r\n
+numComments=4

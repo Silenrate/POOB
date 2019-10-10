@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ClimberHero
+comment0.text=\r\n\ A\ hero\ that\ climbs\ the\ buildings\ of\ a\ city\ of\ heroes.\r\n\ \r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\ \r\n\ @version\ (25/03/2019)\r\n
+comment1.params=city\ color\ hidingBuilding\ strength
+comment1.target=ClimberHero(CityOfHeroes,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ClimberHero\ extends\ Hero\r\n
+comment2.params=tempY\ actualY\ actualX\ i\ angle
+comment2.target=boolean\ heroSmashBuilding(java.math.BigDecimal,\ java.math.BigDecimal,\ java.math.BigDecimal,\ int,\ double)
+comment2.text=\r\n\ Verifies\ if\ in\ a\ jump\ smashes\ with\ a\ building\r\n\ \r\n\ @param\ tempY\ the\ height\ that\ has\ the\ hero\ in\ the\ moment\r\n\ @param\ actualY\ the\ vertical\ coordinate\ of\ the\ building\r\n\ @param\ actualX\ the\ horizontal\ coordinate\ of\ the\ building\r\n\ @param\ i\ the\ index\ of\ the\ building\r\n\ @param\ angle\ the\ angle\ of\ the\ jump\r\n\ @return\ The\ boolean\ value\ that\ represents\ if\ the\ hero\ smashes\ or\ not\ the\ building\r\n
+comment3.params=tempY\ actualY\ actualX\ bWidth\ building
+comment3.target=void\ climb(int,\ int,\ int,\ int,\ Building)
+comment3.text=\r\n\ Makes\ the\ hero\ climbs\ a\ building\r\n\ \r\n\ @param\ tempY\ the\ height\ that\ has\ the\ hero\ in\ the\ moment\r\n\ @param\ actualY\ the\ vertical\ coordinate\ of\ the\ building\r\n\ @param\ actualX\ the\ horizontal\ coordinate\ of\ the\ building\r\n\ @param\ bWidth\ the\ width\ of\ the\ building\r\n\ @param\ building\ the\ building\ that\ the\ hero\ is\ going\ to\ climb\r\n
+numComments=4

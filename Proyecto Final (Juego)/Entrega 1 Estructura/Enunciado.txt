@@ -1,0 +1,7 @@
+Presentación a par. Estructura.
+El producto a revisar son los dos diagramas iniciales  del proyecto.
+
+
+Presentación : bosquejo de interfaz
+
+Aplicación: diagrama de clases

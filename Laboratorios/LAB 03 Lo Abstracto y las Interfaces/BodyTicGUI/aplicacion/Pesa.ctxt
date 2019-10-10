@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Pesa
+comment1.params=salon\ x\ y\ size
+comment1.target=Pesa(Salon,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ pesa.\r\n
+comment2.params=
+comment2.target=java.lang.String\ forma()
+comment2.text=\r\n\ Conoce\ la\ forma\ de\ la\ pesa.\r\n\ @return\ Un\ string\ con\ la\ forma\ de\ la\ pesa.\r\n
+comment3.params=
+comment3.target=void\ pare()
+comment3.text=\r\n\ Termina\ la\ rutina\ de\ la\ pesa.\r\n
+comment4.params=
+comment4.target=void\ inicie()
+comment4.text=\r\n\ Inicia\ la\ rutina\ de\ la\ pesa.\r\n
+comment5.params=
+comment5.target=java.awt.Color\ getColor()
+comment5.text=\r\n\ Conoce\ el\ color\ de\ la\ pesa.\r\n\ @return\ El\ color\ de\ la\ pesa\ de\ tipo\ Color.\r\n
+comment6.params=
+comment6.target=int\ getPosicionY()
+comment6.text=\r\n\ Conoce\ la\ posicion\ vertical\ de\ la\ pesa.\r\n\ @return\ La\ coordenada\ y\ de\ la\ pesa.\r\n
+comment7.params=
+comment7.target=int\ getPosicionX()
+comment7.text=\r\n\ Conoce\ la\ posicion\ horizontal\ de\ la\ pesa.\r\n\ @return\ La\ coordenada\ x\ de\ la\ pesa.\r\n
+comment8.params=
+comment8.target=int\ getSize()
+comment8.text=\r\n\ Conoce\ el\ peso\ de\ la\ pesa.\r\n\ @return\ La\ coordenada\ x\ de\ la\ pesa.\r\n
+numComments=9

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=DeportistaAvanzado
+comment0.text=\r\n\ Un\ deportista\ que\ se\ ejercita\ con\ m\u00E1sfrecuencia\ que\ los\ deportistas\ comunes.\r\n\r\n\ @author\ (Nicolas\ Aguilera\ y\ Daniel\ Walteros)\r\n\ @version\ (11\ of\ March\ of\ 2019)\r\n
+comment1.params=salon\ nombre\ posicionx\ posiciony
+comment1.target=DeportistaAvanzado(Salon,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ un\ Deportista\ Avanzado.\r\n
+comment2.params=
+comment2.target=void\ inicie()
+comment2.text=\r\n\ Inicia\ la\ rutina\ de\ un\ deportista\ avanzado.\r\n
+comment3.params=
+comment3.target=void\ masResistencia()
+comment3.text=\r\n\ Aumenta\ la\ duracion\ de\ un\ deportista\ avanzado.\r\n
+comment4.params=
+comment4.target=void\ pare()
+comment4.text=\r\n\ Termina\ la\ rutina\ de\ un\ deportista\ avanzado.\r\n
+comment5.params=
+comment5.target=void\ decida()
+comment5.text=\r\n\ Le\ permite\ al\ deportista\ avnazdo\ decidir\ si\ seguir\ o\ no,\ por\ defecto\ el\ continuara\ eternamente.\r\n
+numComments=6

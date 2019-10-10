@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Persona
+comment1.params=nombre
+comment1.target=Persona(java.lang.String)
+comment1.text=\r\n\ Crea\ una\ persona\r\n\ \r\n
+comment2.params=
+comment2.target=int\ valorHora()
+comment2.text=\r\n\ Retorna\ el\ valor\ hora\ de\ una\ persona\r\n\ @return\r\n\ @throws\ EquipoExcepcion\ si\ no\ se\ conoce\ la\ persona\ o\ su\ valor\ hora\r\n
+numComments=3

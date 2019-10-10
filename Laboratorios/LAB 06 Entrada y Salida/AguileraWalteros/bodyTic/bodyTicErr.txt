@@ -1,0 +1,12 @@
+Deportista edward 100 100
+Deportista bella 200 100
+DeportistaAvanzado neo 250 300
+DeportistaAvanzado trinity 350 300
+DeportistaHablador han 120 300
+DeportistaHablador leila 120 400
+Bola java.awt.Color[r=0,g=0,b=255] 0 -25 50
+Bola java.awt.Color[r=0,g0,b=255] 540 500 50
+DeportistaVigorexo java.awt.Color[r=0,g=255,b=0] 8 nicolas 100 200
+DeportistaVigorexo java.awt.Color[r=0,g=255,b=0] 8 daniel 200 200
+Pesa java.awt.Color[r=255,g=255,b=0] 340 -25 200
+Pesa java.awt.Color[r=255,g=255,b=0] 0 490 200
